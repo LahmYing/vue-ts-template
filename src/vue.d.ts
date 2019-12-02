@@ -6,9 +6,4 @@ declare module 'vue/types/vue' {
   interface VueConstructor {
     locale: any
   }
-  interface VueConfiguration {
-    lang: any
-  }
-  interface Vue {
-  }
 }

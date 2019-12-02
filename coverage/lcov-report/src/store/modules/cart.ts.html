@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/store/modules/cart.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">All files</a> / <a href="index.html">src/store/modules</a> cart.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/22</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { Commit } from 'vuex'
+<span class="cstat-no" title="statement not covered" >import shop from '../../api/shop'</span>
+<span class="cstat-no" title="statement not covered" >import * as types from '../mutation-types'</span>
+import { CartProduct, CheckoutStatus, AddToCartPayload } from '../index'
+&nbsp;
+interface Shape {
+  id: number
+  quantity: number
+}
+&nbsp;
+interface CheckoutFailurePayload {
+  savedCartItems: Shape[]
+}
+&nbsp;
+export interface State {
+  added: Shape[]
+  checkoutStatus: CheckoutStatus
+}
+&nbsp;
+// initial state
+// shape: [{ id, quantity }]
+const initState: State = <span class="cstat-no" title="statement not covered" >{</span>
+  added: [],
+  checkoutStatus: null,
+}
+&nbsp;
+// getters
+const getters = <span class="cstat-no" title="statement not covered" >{</span>
+  checkoutStatus: <span class="fstat-no" title="function not covered" >(</span>state: State) =&gt; <span class="cstat-no" title="statement not covered" >state.checkoutStatus,</span>
+}
+&nbsp;
+// actions
+const actions = <span class="cstat-no" title="statement not covered" >{</span>
+<span class="fstat-no" title="function not covered" >  checkout (</span>context: { commit: Commit; state: State }, products: CartProduct[]) {
+    const failurePayload: CheckoutFailurePayload = <span class="cstat-no" title="statement not covered" >{</span>
+      savedCartItems: [...context.state.added],
+    }
+<span class="cstat-no" title="statement not covered" >    context.commit(types.CHECKOUT_REQUEST)</span>
+<span class="cstat-no" title="statement not covered" >    shop.buyProducts(</span>
+      products,
+<span class="fstat-no" title="function not covered" >      () =&gt; <span class="cstat-no" title="statement not covered" >context.commit(types.CHECKOUT_SUCCESS),</span></span>
+<span class="fstat-no" title="function not covered" >      () =&gt; <span class="cstat-no" title="statement not covered" >context.commit(types.CHECKOUT_FAILURE, failurePayload),</span></span>
+    )
+  },
+}
+&nbsp;
+// mutations
+const mutations<span class="cstat-no" title="statement not covered" > = {</span>
+<span class="fstat-no" title="function not covered" >  [types.ADD_TO_CART] (</span>state: State, payload: AddToCartPayload) {
+<span class="cstat-no" title="statement not covered" >    state.checkoutStatus = null</span>
+    const record = <span class="cstat-no" title="statement not covered" >state.added.find(<span class="fstat-no" title="function not covered" >(</span>p) =&gt; <span class="cstat-no" title="statement not covered" >p.id === payload.id)</span></span>
+<span class="cstat-no" title="statement not covered" >    if (!record) {</span>
+<span class="cstat-no" title="statement not covered" >      state.added.push({</span>
+        id: payload.id,
+        quantity: 1,
+      })
+    } else {
+<span class="cstat-no" title="statement not covered" >      record.quantity++</span>
+    }
+  },
+&nbsp;
+<span class="fstat-no" title="function not covered" >  [types.CHECKOUT_REQUEST] (</span>state: State) {
+    // clear cart
+<span class="cstat-no" title="statement not covered" >    state.added = []</span>
+<span class="cstat-no" title="statement not covered" >    state.checkoutStatus = null</span>
+  },
+&nbsp;
+<span class="fstat-no" title="function not covered" >  [types.CHECKOUT_SUCCESS] (</span>state: State) {
+<span class="cstat-no" title="statement not covered" >    state.checkoutStatus = 'successful'</span>
+  },
+&nbsp;
+<span class="fstat-no" title="function not covered" >  [types.CHECKOUT_FAILURE] (</span>state: State, payload: CheckoutFailurePayload) {
+    // rollback to the cart saved before sending the request
+<span class="cstat-no" title="statement not covered" >    state.added = payload.savedCartItems</span>
+<span class="cstat-no" title="statement not covered" >    state.checkoutStatus = 'failed'</span>
+  },
+}
+&nbsp;
+export default {
+  state: initState,
+  getters,
+  actions,
+  mutations,
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Dec 02 2019 11:52:10 GMT+0800 (GMT+08:00)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>
